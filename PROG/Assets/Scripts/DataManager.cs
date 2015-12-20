@@ -3,22 +3,37 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 
-public class DataManager : MonoBehaviour {
+public class DataManager  {
 
 	/// <summary>
 	/// 単語帳データ
 	/// </summary>
+	[Serializable]
 	public class Book
 	{
 		public Word[] words;
+
+		[Serializable]
 		public class Word{
+			/// <summary>
+			/// The index.
+			/// </summary>
 			public int index;
+			/// <summary>
+			/// カテゴリ
+			/// </summary>
 			public int category;
-			public string word;
-			public string japanese;
+			/// <summary>
+			/// 英単語.
+			/// </summary>
+			public string englishWord;
+			/// <summary>
+			/// 日本語訳.
+			/// </summary>
+			public string japaneseTranslation;
 		}
 	}
-
+	
 	public enum eCategory
 	{
 		/// <summary>
@@ -66,11 +81,14 @@ public class DataManager : MonoBehaviour {
 	void ParseJson()
 	{
 		TextAsset textAsset = Resources.Load ("sample") as TextAsset;
-		bookData = LitJson.JsonMapper.ToObject<Book> (textAsset.text);
+		var data = JsonUtility.FromJson<Book> (textAsset.text);
+		bookData = data as Book;
 
+		/*
 		Debug.Log (bookData.words [0].index);
 		Debug.Log (bookData.words [0].category);
-		Debug.Log (bookData.words [0].word);
-		Debug.Log (bookData.words [0].japanese);
+		Debug.Log (bookData.words [0].englishWord);
+		Debug.Log (bookData.words [0].japaneseTranslation);
+		*/
 	}
 }

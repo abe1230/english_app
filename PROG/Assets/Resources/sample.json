@@ -1,12 +1,12 @@
 {
 	"words":[
-	{"index":0,"category":1,"word":"create","japanese":"創造する、創作する"},
-	{"index":1,"category":1,"word":"manage","japanese":"管理する、経営する"},
-	{"index":2,"category":1,"word":"provision","japanese":"供給、用意、準備"},
-	{"index":8,"category":1,"word":"require","japanese":"必要とする、要求する"},
-	{"index":9,"category":1,"word":"supply","japanese":"供給する、与える"},
+	{"index":0,"category":1,"englishWord":"create","japaneseTranslation":"創造する、創作する"},
+	{"index":1,"category":1,"englishWord":"manage","japaneseTranslation":"管理する、経営する"},
+	{"index":2,"category":1,"englishWord":"provision","japaneseTranslation":"供給、用意、準備"},
+	{"index":8,"category":1,"englishWord":"require","japaneseTranslation":"必要とする、要求する"},
+	{"index":9,"category":1,"englishWord":"supply","japaneseTranslation":"供給する、与える"},
 
-	{"index":1001,"category":2,"word":"interactive","japanese":"相互作用の"},
-	{"index":1002,"category":2,"word":"executive","japanese":"実行する、実行力のある"}
+	{"index":1001,"category":2,"englishWord":"interactive","japaneseTranslation":"相互作用の"},
+	{"index":1002,"category":2,"englishWord":"executive","japaneseTranslation":"実行する、実行力のある"}
 	]	
 }

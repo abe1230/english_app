@@ -12,6 +12,5 @@ public class Utility : MonoBehaviour {
 		else
 			return random.Next ();
 	}
-	
 
 }

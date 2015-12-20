@@ -38,10 +38,10 @@ public class PracticeScene : MonoBehaviour {
 			currentIndex = book.words.Length - 1;
 		else if (currentIndex < 0)
 			currentIndex = 0;
-		string str = book.words [currentIndex].word;
+		string str = book.words [currentIndex].englishWord;
 		Text word = GameObject.Find ("Canvas/Panel/word").GetComponent<Text> ();
 		word.text = str;
 		Text meaning = GameObject.Find ("Canvas/Panel/meaning").GetComponent<Text> ();
-		meaning.text = book.words [currentIndex].japanese;
+		meaning.text = book.words [currentIndex].japaneseTranslation;
 	}
 }
