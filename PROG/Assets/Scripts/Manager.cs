@@ -3,20 +3,36 @@ using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using MiniJSON;
+using UnityEngine.SceneManagement;
+
+public class Manager{
+
+	private static Manager mInstance = null;
 
 
-public class Manager : MonoBehaviour {
-
-	void Init()
+	public static Manager getManager()
 	{
+		if (mInstance == null)
+		{
+			mInstance = new Manager();
+		}
 
+		return mInstance;
 	}
-		
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public enum eScene
+	{
+		SCENE_TITLE = 0,
+		SCENE_MENU,
+		SCENE_PRACTICE,
+	}
+
+	string[] sceneNames = { "title", "main", "practice" };
+
+	public void sceneTransition(eScene scene)
+	{
+		SceneManager.LoadScene(sceneNames[(int)scene]);
+
 	}
 
 	void Parse()
@@ -28,7 +44,6 @@ public class Manager : MonoBehaviour {
 		Dictionary<string,object> json = Json.Deserialize (jsonText) as Dictionary<string,object>;
 		Debug.Log ((string)json["word"] );
 		*/
-
 	}
 
 

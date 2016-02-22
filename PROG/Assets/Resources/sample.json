@@ -6,7 +6,12 @@
 	{"index":8,"category":1,"englishWord":"require","japaneseTranslation":"必要とする、要求する"},
 	{"index":9,"category":1,"englishWord":"supply","japaneseTranslation":"供給する、与える"},
 
-	{"index":1001,"category":2,"englishWord":"interactive","japaneseTranslation":"相互作用の"},
-	{"index":1002,"category":2,"englishWord":"executive","japaneseTranslation":"実行する、実行力のある"}
+
+	{"index":10000,"category":2,"englishWord":"interactive","japaneseTranslation":"相互作用の"},
+	{"index":10001,"category":2,"englishWord":"executive","japaneseTranslation":"実行する、実行力のある"},
+		
+	{"index":20000,"category":2,"englishWord":"previous","japaneseTranslation":"先の、前の、以前の"}
+
+
 	]	
 }
